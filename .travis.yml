@@ -1,0 +1,30 @@
+language: go
+
+notifications:
+  email:
+    recipients:
+      - paul@myitcv.io
+    on_success: change
+    on_failure: always
+
+go:
+  - 1.x
+
+go_import_path: myitcv.io/vgoimporter
+
+install: true
+
+before_script:
+  - unset GOROOT
+  - ./_scripts/installGo.sh
+  - export PATH=$HOME/gotip/bin:$PATH
+  - go version
+  - go env
+  - ./_scripts/installVgo.sh
+  - export PATH=$GOPATH/bin:$PATH
+  - vgo version
+  - vgo env
+
+script:
+  - ./_scripts/run_tests.sh
+  - ./_scripts/check_git_is_clean.sh
