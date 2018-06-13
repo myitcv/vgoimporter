@@ -32,6 +32,7 @@ func TestPrePostGoInstall(t *testing.T) {
 	want := `# myitcv.io/vgoimporter/_example
 ./example.go:10:13: undefined: Test
 ./example.go:19:27: undefined: asdf
+FAIL	myitcv.io/vgoimporter/_example [build failed]
 `
 	out, err := cmd.CombinedOutput()
 	if err != nil {
@@ -41,7 +42,7 @@ func TestPrePostGoInstall(t *testing.T) {
 	}
 
 	if got := string(out); got != want {
-		t.Fatalf("unexpected output; got\n%v\nwanted:\n%v", got, want)
+		t.Fatalf("unexpected output; got\n%q\nwanted:\n%q", got, want)
 	}
 	t.Run("post", basicTest)
 }
