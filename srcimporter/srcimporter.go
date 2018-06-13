@@ -24,7 +24,7 @@ import (
 type PkgInfo struct {
 	ImportPath  string
 	Dir         string
-	Target      string
+	Export      string
 	Standard    bool
 	Name        string
 	GoFiles     []string

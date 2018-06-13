@@ -1,1 +1,1 @@
-    ./_vendor/src/myitcv.io/hybridimporter  67d6907ceef02d6adf26d05bd0a0b4c05344e109  git@github.com:myitcv/hybridimporter
+    ./_vendor/src/myitcv.io/hybridimporter  05d8282d4f611ba98dcafc5d1ea5ac92f7e8a2ff  git@github.com:myitcv/hybridimporter
